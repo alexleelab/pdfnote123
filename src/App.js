@@ -22,7 +22,7 @@ export default function App() {
           <NavBar token={token} setToken={setToken} title={title} setTitle={setTitle}/>
           <Routes>
             <Route path="/pdfnote123/" element={<MainPage token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
-            <Route path="/pdfnote123/signup" element={<Signup className="login" token={token} setToken={setToken} title={title} setTitle={setTitle}></Signup>}></Route>
+            <Route path="/signup" element={<Signup className="login" token={token} setToken={setToken} title={title} setTitle={setTitle}></Signup>}></Route>
             <Route path="/pdfnote123/login" element={<Login className="login" token={token} setToken={setToken} title={title} setTitle={setTitle}></Login>}></Route>
           </Routes>
         </Router>

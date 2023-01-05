@@ -22,7 +22,7 @@ const Navbar = (props) => {
       </>
     )
   }
-  else if(location.pathname=="/pdfnote123/signup"){
+  else if(location.pathname=="/signup"){
     return(
       <>
         <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/')}>HomePage</Button>
@@ -31,7 +31,7 @@ const Navbar = (props) => {
       </>
     )
   }
-  else if(location.pathname=="/pdfnote123/pdfnote123/login"){
+  else if(location.pathname=="/login"){
     return(
       <>
         <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/')}>HomePage</Button>
@@ -41,7 +41,7 @@ const Navbar = (props) => {
     )
   }
 
-  else if(location.pathname=="/pdfnote123/homepage"){
+  else if(location.pathname=="/homepage"){
     return(
       <>
           <Button size="large" type="dashed" style={{ width: '20%' }} disabled>Home</Button>
@@ -50,7 +50,7 @@ const Navbar = (props) => {
       </>
     )
   }
-  else if(location.pathname=="/pdfnote123/invited"){
+  else if(location.pathname=="/invited"){
     return(
       <>
           <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/homepage')}>Home</Button>
@@ -59,7 +59,7 @@ const Navbar = (props) => {
       </>
     )
   }
-  else if(location.pathname.slice(0,14)=='/pdfnote123/homepage/note'){
+  else if(location.pathname.slice(0,14)=='/homepage/note'){
     return(
       <>
           <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/homepage')}>Back to Home</Button>
