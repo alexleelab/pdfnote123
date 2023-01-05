@@ -12,10 +12,9 @@ import {Login,Signup} from './router/account'
 import './App.css'
 
 export default function App() {
-  const {token,setToken}=useState('')
-  const {title,setTitle}=useState('')
+  const [token,setToken]=useState('')
+  const [title,setTitle]=useState('')
   if(token===''){
-    //console.log('out')
     return (
       <div className="App">
         <Router>
