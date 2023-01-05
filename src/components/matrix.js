@@ -109,7 +109,7 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
                 
                 <div className='extracted' data-color-mode="light">
                     <div className='tools_row'>
-                        {data.status}
+                        {(!data.status)?'':data.status}
                         {(data.status.slice(-10)=='is editing'&&data.status!=`${token} is editing`)?
                            <Button className='right_top' disabled>
                            <EditOutlined />
