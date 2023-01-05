@@ -14,15 +14,16 @@ import './App.css'
 export default function App() {
   const [token,setToken]=useState('')
   const [title,setTitle]=useState('')
+  console.log("token",token)
   if(token===''){
     return (
       <div className="App">
         <Router>
           <NavBar token={token} setToken={setToken} title={title} setTitle={setTitle}/>
           <Routes>
-            <Route path="/" element={<MainPage token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
-            <Route path="/signup" element={<Signup className="login" token={token} setToken={setToken} title={title} setTitle={setTitle}></Signup>}></Route>
-            <Route path="/login" element={<Login className="login" token={token} setToken={setToken} title={title} setTitle={setTitle}></Login>}></Route>
+            <Route path="/pdfnote123/" element={<MainPage token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
+            <Route path="/pdfnote123/signup" element={<Signup className="login" token={token} setToken={setToken} title={title} setTitle={setTitle}></Signup>}></Route>
+            <Route path="/pdfnote123/login" element={<Login className="login" token={token} setToken={setToken} title={title} setTitle={setTitle}></Login>}></Route>
           </Routes>
         </Router>
       </div>
@@ -35,10 +36,10 @@ export default function App() {
         <Router>
           <NavBar token={token} setToken={setToken} title={title} setTitle={setTitle}/>
           <Routes>
-            <Route path="/homepage" element={<Home token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
-            <Route path="/invited" element={<Invited token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
-            <Route path="/invited/:noteid" element={<Invited token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
-            <Route path="/homepage/note/:noteid" element={<Note token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
+            <Route path="/pdfnote123/homepage" element={<Home token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
+            <Route path="/pdfnote123/invited" element={<Invited token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
+            <Route path="/pdfnote123/invited/:noteid" element={<Invited token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
+            <Route path="/pdfnote123/homepage/note/:noteid" element={<Note token={token} setToken={setToken} title={title} setTitle={setTitle}/>} />
           </Routes>
         </Router>
       </div>
