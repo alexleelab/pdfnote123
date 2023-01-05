@@ -25,7 +25,7 @@ const Navbar = (props) => {
   else if(location.pathname=="/signup"){
     return(
       <>
-        <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/')}>HomePage</Button>
+        <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/pdfnote123/')}>HomePage</Button>
         <Button size="large" type="dashed" style={{ width: '20%' }} disabled>Sign up</Button>
         <Button size="large" type='primary' style={{ width: '20%' }} danger onClick={e=>navigate('/login')}>Sign in</Button>
       </>
@@ -34,7 +34,7 @@ const Navbar = (props) => {
   else if(location.pathname=="/login"){
     return(
       <>
-        <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/')}>HomePage</Button>
+        <Button size="large" type='primary' style={{ width: '20%' }} onClick={e=>navigate('/pdfnote123/')}>HomePage</Button>
         <Button size="large" type='primary' style={{ width: '20%' }} danger onClick={e=>navigate('/signup')}>Sign up</Button>
         <Button size="large" type="dashed" style={{ width: '20%' }} disabled>Sign in</Button>
       </>
