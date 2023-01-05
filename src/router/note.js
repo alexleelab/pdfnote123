@@ -67,7 +67,6 @@ export default function Home(props) {
     return (<p>Error :</p>);
   }
   const items=itemsData.pdfitems.slice().sort((a, b) => a.pages - b.pages);
-  console.log(items)
   return (
     <>
       <Divider><h1>note title's: {title}</h1></Divider>

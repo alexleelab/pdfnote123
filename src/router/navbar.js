@@ -12,7 +12,6 @@ const Navbar = (props) => {
     setToken('nothing')
     navigate('/login')
   }
-  console.log(location)
   if(location.pathname=="/pdfnote123/"){
     return(
       <>

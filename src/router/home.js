@@ -31,6 +31,7 @@ export default function Home(props) {
         document:NOTE_CREATED_SUBSCRIPTION,
         updateQuery: (prev, { subscriptionData })=>{
           const temp=subscriptionData.data.noteHandled
+          console.log(temp)
           if(temp.message=="delete")
             return{
               noteQuery:prev.noteQuery.replace(`${temp.title}_${temp.userId},`,``)
@@ -42,7 +43,6 @@ export default function Home(props) {
       })
     },[subscribe]
   )
-
   if (loading) return <p>Loading...</p>;
   if (error) {
     // eslint-disable-next-line no-console
@@ -51,6 +51,7 @@ export default function Home(props) {
   }
   
   const notelist=itemsData.noteQuery?itemsData.noteQuery.split(','):[]
+  console.log(notelist)
   const toNote=(e)=>{
     setTitle(e)
     navigate(`note/${e}`)
