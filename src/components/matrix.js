@@ -29,7 +29,7 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
     const [imageMode,setImageMode]=useState(0)
     const changeMode=(e)=>{
         if(mode=='displaying'){
-            console.log({
+            console.log("test",{
                     input:{
                         id:data.id,
                         userId:data.userId,
