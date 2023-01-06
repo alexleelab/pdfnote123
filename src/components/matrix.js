@@ -34,9 +34,9 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
             tempUpdateItem({
                 variables:{
                     input:{
-                        id:'abc',
-                        markdown:'dfe',
-                        status:'temp'
+                        id:data.id,
+                        markdown:MDValue,
+                        status:`${token} is editing`
                     }
                 }
             })
