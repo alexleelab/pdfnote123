@@ -46,13 +46,13 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
                 variables: {
                     input:{
                         id:data.id,
-                        userId:data.userId,
+                        userId:"",
                         title:data.title,
-                        pages:data.pages.toString(),
-                        markdown:MDValue.toString(),
-                        status:`${token} is editing`,
-                        imagelink:(!data.imageLink)?'':data.imgageLink,
-                        pdfBuffer:(!data.pdfBuffer)?'':data.pdfBuffer
+                        pages:"1",
+                        markdown:"",
+                        status:"",
+                        imagelink:"",
+                        pdfBuffer:""
                     }
                 }
             });
