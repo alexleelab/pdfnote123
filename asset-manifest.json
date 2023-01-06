@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/pdfnote123/static/css/main.59ca65bc.css",
-    "main.js": "/pdfnote123/static/js/main.a23ccf7e.js",
+    "main.js": "/pdfnote123/static/js/main.8ddf861e.js",
     "index.html": "/pdfnote123/index.html",
     "main.59ca65bc.css.map": "/pdfnote123/static/css/main.59ca65bc.css.map",
-    "main.a23ccf7e.js.map": "/pdfnote123/static/js/main.a23ccf7e.js.map"
+    "main.8ddf861e.js.map": "/pdfnote123/static/js/main.8ddf861e.js.map"
   },
   "entrypoints": [
     "static/css/main.59ca65bc.css",
-    "static/js/main.a23ccf7e.js"
+    "static/js/main.8ddf861e.js"
   ]
 }
