@@ -29,6 +29,18 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
     const [imageMode,setImageMode]=useState(0)
     const changeMode=(e)=>{
         if(mode=='displaying'){
+            console.log({
+                    input:{
+                        id:data.id,
+                        userId:data.userId,
+                        title:data.title,
+                        pages:data.pages,
+                        markdown:MDValue.toString(),
+                        status:`${token} is editing`,
+                        imagelink:data.imageLink,
+                        pdfBuffer:data.pdfBuffer
+                    }
+                })
             setMode('editing')
             updateItem({
                 variables: {
@@ -46,6 +58,20 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
             });
         }
         else{
+            console.log({
+                variables: {
+                    input:{
+                        id:data.id,
+                        userId:data.userId,
+                        title:data.title,
+                        pages:data.pages,
+                        markdown:MDValue.toString(),
+                        status:`${token} finish editing`,
+                        imagelink:data.imageLink,
+                        pdfBuffer:data.pdfBuffer
+                    }
+                }
+            })
             setMode('displaying')
             updateItem({
                 variables: {
@@ -113,7 +139,7 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
                         {(data.status.slice(-10)=='is editing'&&data.status!=`${token} is editing`)?
                            <Button className='right_top' disabled>
                            <EditOutlined />
-                       </Button>:<Button className='right_top' onClick={changeMode}>
+                       </Button>:<Button className='right_top' onClick={e=>changeMode(e)}>
                             <EditOutlined />
                         </Button> }
                         <Button type='primary' danger onClick={e=>deleteItem(e)}>x</Button>
