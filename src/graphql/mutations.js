@@ -47,3 +47,9 @@ export const DELETE_ITEM_MUTATION =gql`
     deleteItem(input:$input)
   }
 `
+
+export const TEMP_UPDATE_PDF_ITEM_MUTATION=gql`
+  mutation TempUpdatePdfItem($input:tempUpdatePdfItemInput!){
+    tempupdatePdfItem(input:$input)
+  }
+`

@@ -7,7 +7,7 @@ import {EditOutlined} from '@ant-design/icons'
 import MDEditor from '@uiw/react-md-editor';
 
 import { useMutation } from '@apollo/client';
-import { UPDATE_PDF_MUTATION,CREATE_PDF_MUTATION,DELETE_ITEM_MUTATION} from '../graphql/mutations'
+import { UPDATE_PDF_MUTATION,CREATE_PDF_MUTATION,DELETE_ITEM_MUTATION,TEMP_UPDATE_PDF_ITEM_MUTATION} from '../graphql/mutations'
 import PDF from '../components/pdf'
 
 function renderPdf(pdfBuffer) {
@@ -24,26 +24,22 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
     const [mode,setMode]=useState('displaying')
     const [MDValue,setMDValue]=useState(data['markdown'])
     const [updateItem] = useMutation(UPDATE_PDF_MUTATION);
+    const [tempUpdateItem] = useMutation(TEMP_UPDATE_PDF_ITEM_MUTATION)
     const [createItem] = useMutation(CREATE_PDF_MUTATION)
     const [deleteItemMethod] = useMutation(DELETE_ITEM_MUTATION)
     const [imageMode,setImageMode]=useState(0)
     const changeMode=(e)=>{
         if(mode=='displaying'){
             setMode('editing')
-            updateItem({
-                variables: {
+            tempUpdateItem({
+                variables:{
                     input:{
-                        id:"abc",
-                        userId:"",
-                        title:"def",
-                        pages:"1",
-                        markdown:"",
-                        status:"",
-                        imagelink:"",
-                        pdfBuffer:""
+                        id:'abc',
+                        markdown:'dfe',
+                        status:'temp'
                     }
                 }
-            });
+            })
         }
         else{
             setMode('displaying')
