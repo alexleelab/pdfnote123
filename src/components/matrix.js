@@ -29,25 +29,13 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
     const [imageMode,setImageMode]=useState(0)
     const changeMode=(e)=>{
         if(mode=='displaying'){
-            console.log("test",{
-                    input:{
-                        id:data.id,
-                        userId:data.userId,
-                        title:data.title,
-                        pages:data.pages.toString(),
-                        markdown:MDValue.toString(),
-                        status:`${token} is editing`,
-                        imagelink:(!data.imageLink)?'':data.imgageLink,
-                        pdfBuffer:(!data.pdfBuffer)?'':data.pdfBuffer
-                    }
-                })
             setMode('editing')
             updateItem({
                 variables: {
                     input:{
-                        id:data.id,
+                        id:"abc",
                         userId:"",
-                        title:data.title,
+                        title:"def",
                         pages:"1",
                         markdown:"",
                         status:"",
@@ -58,20 +46,6 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
             });
         }
         else{
-            console.log({
-                variables: {
-                    input:{
-                        id:data.id,
-                        userId:data.userId,
-                        title:data.title,
-                        pages:data.pages.toString(),
-                        markdown:MDValue.toString(),
-                        status:`${token} finish editing`,
-                        imagelink:(!data.imageLink)?'':data.imgageLink,
-                        pdfBuffer:(!data.pdfBuffer)?'':data.pdfBuffer
-                    }
-                }
-            })
             setMode('displaying')
             updateItem({
                 variables: {
