@@ -34,11 +34,11 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
                         id:data.id,
                         userId:data.userId,
                         title:data.title,
-                        pages:data.pages,
+                        pages:data.pages.toString(),
                         markdown:MDValue.toString(),
                         status:`${token} is editing`,
-                        imagelink:data.imageLink,
-                        pdfBuffer:data.pdfBuffer
+                        imagelink:(!data.imageLink)?'':data.imgageLink,
+                        pdfBuffer:(!data.pdfBuffer)?'':data.pdfBuffer
                     }
                 })
             setMode('editing')
@@ -48,11 +48,11 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
                         id:data.id,
                         userId:data.userId,
                         title:data.title,
-                        pages:data.pages,
+                        pages:data.pages.toString(),
                         markdown:MDValue.toString(),
                         status:`${token} is editing`,
-                        imagelink:data.imageLink,
-                        pdfBuffer:data.pdfBuffer
+                        imagelink:(!data.imageLink)?'':data.imgageLink,
+                        pdfBuffer:(!data.pdfBuffer)?'':data.pdfBuffer
                     }
                 }
             });
@@ -64,11 +64,11 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
                         id:data.id,
                         userId:data.userId,
                         title:data.title,
-                        pages:data.pages,
+                        pages:data.pages.toString(),
                         markdown:MDValue.toString(),
                         status:`${token} finish editing`,
-                        imagelink:data.imageLink,
-                        pdfBuffer:data.pdfBuffer
+                        imagelink:(!data.imageLink)?'':data.imgageLink,
+                        pdfBuffer:(!data.pdfBuffer)?'':data.pdfBuffer
                     }
                 }
             })
@@ -79,11 +79,11 @@ const Matrix=({className,data,children,setUploadDisaply,uploadDisplay,pdfFileDat
                         id:data.id,
                         userId:data.userId,
                         title:data.title,
-                        pages:data.pages,
+                        pages:data.pages.toString(),
                         markdown:MDValue.toString(),
                         status:`${token} finish editing`,
-                        imagelink:data.imageLink,
-                        pdfBuffer:data.pdfBuffer
+                        imagelink:(!data.imageLink)?'':data.imgageLink,
+                        pdfBuffer:(!data.pdfBuffer)?'':data.pdfBuffer
                     }
                 }
             });
